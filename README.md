@@ -1,2 +1,2 @@
 # FlASK_BLOG Tutorial
-Refer to https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
+Refer to this <a ref='https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3' target='_blank'>tutorial link</a>
