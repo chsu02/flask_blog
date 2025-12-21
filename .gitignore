@@ -16,6 +16,9 @@ Forks
 31
 <script src="https://gist.github.com/GhostofGoes/94580e76cd251972b15b4821c8a06f59.js"></script>
 Basic .gitignore template for Python projects
+# Database
+database.db
+
 #.gitignore
 # Editors
 .vscode/
