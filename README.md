@@ -20,8 +20,60 @@ A tiny example blog application built with Flask following the DigitalOcean "How
 ---
 
 ## Prerequisites ⚙️
-- Python 3.8+ installed
+- Python 3.8+ installed (recommended: 3.10+)
 - Recommended: create and use a virtual environment
+
+---
+
+## Using uv (Astral) — optional 📦
+`uv` is a fast, cross-platform Python package and project manager from Astral that can replace tools like `pip`, `pipx`, and `virtualenv`. It provides fast installs, lockfiles, Python version management, and a pip-compatible interface.
+
+**Install**
+- macOS / Linux (recommended installer):
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+- Windows or pip-based install:
+
+```powershell
+python -m pip install uv
+```
+
+See https://docs.astral.sh/uv/getting-started/installation/ for other install options.
+
+**Quick uv workflow (from this repo)**
+
+```bash
+# create a project venv (creates .venv)
+uv venv --python 3.11
+
+# install project dependencies from requirements.txt
+uv pip sync requirements.txt
+
+# initialize the database
+uv run python init_db.py
+
+# run the dev server (Flask)
+uv run -- python -m flask --app app --debug run
+```
+
+**Windows PowerShell**
+
+```powershell
+uv venv --python 3.11
+uv pip sync requirements.txt
+uv run python init_db.py
+uv run -- python -m flask --app app --debug run
+```
+
+**Notes**
+- `uv` manages environments and packages; it is *not* an HTTP server. For an ASGI server, use `uvicorn` (a different project).
+- Use `uv python install` / `uv python pin` to install or pin Python versions, and `uv lock` / `uv sync` for reproducible installs.
+- `uv` supports macOS, Linux, and Windows.
+
+Link: https://docs.astral.sh/uv/
 
 ---
 
